@@ -6,8 +6,8 @@ import chalk from 'chalk';
 //import the greet module that is in the current folder
 import greet from './greet.js';
 
-const styledMessage = chalk.bgYellow.black(greet('Xola'));
-console.log(styledMessage)
+// const styledMessage = chalk.bgYellow.black(greet('Xola'));
+// console.log(styledMessage)
 
 
 import figlet from 'figlet';
@@ -18,5 +18,7 @@ figlet('greet_xola.js', function(err, data) {
         console.dir(err);
         return;
     }
-    console.log(data)
+    const styledMessage = chalk.bgYellow.black(data);
+
+    console.log(styledMessage)
 });
